@@ -1,0 +1,42 @@
+<head>
+    <title>resolutions</title>
+</head>
+
+<body>
+<div class="container">
+    <div class="modalBackground">
+    <div class="modalContainer">
+        <header>
+            <h1>Monthly Resolutions</h1>
+
+            <label class="hide-finished">
+                <input type="checkbox" checked="{{hideFinished}}">
+                Hide Finished Resolutions
+            </label>
+            {{#if currentUser}}
+            {{#if currentUser.services.twitter}}
+            <img src="{{currentUser.services.twitter.profile_image_url}}" >
+            {{/if}}
+            <form class="new-resolution">
+
+                <input type="text" name="title" placeholder="A New Resolution">
+
+
+
+                <input type="submit" value="Submit">
+
+            </form>
+            {{/if}}
+        </header>
+
+        <ul>
+            {{#each resolutions}}
+            {{> resolution}}
+            {{/each}}
+        </ul>
+        {{> loginButtons}}
+    </div>
+    </div>
+</div>
+</body>
+
