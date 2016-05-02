@@ -1,19 +1,18 @@
 <head>
     <title>resolutions</title>
+    <script src="https://use.typekit.net/lot5kje.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 
 <body>
-<div class="container">
-    {{> loginButtons}}
+
     <header>
         {{#if currentUser}}
         <h1>Monthly Resolutions</h1>
-        <div class="modalWrapper">
-
-            <input id="modal" type="checkbox">
-            <label id="modalButton" for="modal">Modal Button</label>
+        <div id="openModal" class="modalWrapper">
 
             <div class="modalWindow">
+                <a href="#close" title="close">Close It</a>
                 <label class="hide-finished">
                     Hide Finished Resolutions
                 </label>
@@ -38,8 +37,11 @@
                 </ul>
             </div>
         </div>
+        <!--<input id="modal" type="checkbox">-->
+        <!--<label id="modalButton" for="modal">Modal Button</label>-->
+
+
         {{/if}}
     </header>
-</div>
 </body>
 
