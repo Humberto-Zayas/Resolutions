@@ -7,12 +7,18 @@
 <body>
 
     <header>
-        {{#if currentUser}}
-        <h1>Monthly Resolutions</h1>
-        <div id="openModal" class="modalWrapper">
+       <div class="modal__overlay" role="dialog" aria-labelledby="modal__title" aria-describedby="modal_desc">
+        <div class="modal__wrap">
+            <label for="modal__trigger">&#10006;</label>
 
-            <div class="modalWindow">
-                <a href="#close" title="close">Close It</a>
+
+
+
+             {{#if currentUser}}
+        <h1>Monthly Resolutions</h1>
+
+
+
                 <label class="hide-finished">
                     Hide Finished Resolutions
                 </label>
@@ -35,13 +41,33 @@
                     {{> resolution}}
                     {{/each}}
                 </ul>
-            </div>
-        </div>
+
         <!--<input id="modal" type="checkbox">-->
         <!--<label id="modalButton" for="modal">Modal Button</label>-->
 
 
         {{/if}}
+
+
+
+
+        </div>
+    </div>
     </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 

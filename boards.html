@@ -27,13 +27,60 @@
                                 </strong>
                             </div>
                             <div id="listOverflow">
-                                <a style="text-decoration: none" href="#openModal">
+
                                     <div id="listCard">
-                                        <p>
-                                            To do List
-                                        </p>
+<div class="modal">
+    <input id="modal__trigger" type="checkbox" />
+    <label class="" for="modal__trigger">To Do List</label>
+    <div class="modal__overlay" role="dialog" aria-labelledby="modal__title" aria-describedby="modal_desc">
+        <div class="modal__wrap">
+            <label for="modal__trigger">&#10006;</label>
+
+
+
+
+             {{#if currentUser}}
+        <h1>Monthly Resolutions</h1>
+
+
+
+                <label class="hide-finished">
+                    Hide Finished Resolutions
+                </label>
+                <input type="checkbox" checked="{{hideFinished}}">
+
+                {{#if currentUser.services.twitter}}
+                <img src="{{currentUser.services.twitter.profile_image_url}}" >
+                {{/if}}
+                <form class="new-resolution">
+
+                    <input type="text" name="title" placeholder="A New Resolution">
+
+
+
+                    <input type="submit" value="Submit">
+
+                </form>
+                <ul>
+                    {{#each resolutions}}
+                    {{> resolution}}
+                    {{/each}}
+                </ul>
+
+        <!--<input id="modal" type="checkbox">-->
+        <!--<label id="modalButton" for="modal">Modal Button</label>-->
+
+
+        {{/if}}
+
+
+
+
+        </div>
+    </div>
+</div>
                                     </div>
-                                </a>
+
                             </div>
                             <a id="addCard">Add a card...</a>
                         </div>
