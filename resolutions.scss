@@ -20,6 +20,7 @@ body {
   font-size: 16px;
   background: $color-primary;
   margin: 0;
+  overflow-x: hidden;
 }
 
 section {
@@ -242,6 +243,10 @@ li.checked .text {
   background-color: lightgray;
   border-radius: 5px;
   padding: .5em;
+  margin: 0 .5em;
+  &:first-child {
+    margin: 0 .5em 0 0;
+  }
 }
 //
 //#listCard {
@@ -289,6 +294,7 @@ li.checked .text {
   border-radius: 5px;
   border-bottom: 1px solid #B3AEAE;
   display: block;
+  margin: .5em 0;
   &:hover{
     background-color: #e6e6e6;
   }
@@ -374,4 +380,5 @@ input:checked ~ .modal__overlay {
 
 #modal__trigger {
   visibility: hidden;
+  position: absolute;
 }
