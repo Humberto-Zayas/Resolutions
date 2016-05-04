@@ -142,3 +142,4 @@ var param = {
 Meteor.methods(param);
 
 
+//Router.route('/boards');
