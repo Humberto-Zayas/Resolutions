@@ -21,6 +21,11 @@ if (Meteor.isClient) { //if
     });
 
     Template.resolution.helpers({
+        templateToLoad: function () {
+            if(Session.get('user.currentCourse') == "TEAS") {
+                return "teasTemplates";
+            }
+        },
         isOwner: function() {
             /*
              result should be true or false
