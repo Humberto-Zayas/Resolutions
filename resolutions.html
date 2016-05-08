@@ -1,19 +1,24 @@
 <head>
     <title>resolutions</title>
+    <script src="https://use.typekit.net/lot5kje.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 
 <body>
-<div class="container">
-    {{> loginButtons}}
+
     <header>
-        {{#if currentUser}}
+       <div class="modal__overlay" role="dialog" aria-labelledby="modal__title" aria-describedby="modal_desc">
+        <div class="modal__wrap">
+            <label for="modal__trigger">&#10006;</label>
+
+
+
+
+             {{#if currentUser}}
         <h1>Monthly Resolutions</h1>
-        <div class="modalWrapper">
 
-            <input id="modal" type="checkbox">
-            <label id="modalButton" for="modal">Modal Button</label>
 
-            <div class="modalWindow">
+
                 <label class="hide-finished">
                     Hide Finished Resolutions
                 </label>
@@ -36,10 +41,21 @@
                     {{> resolution}}
                     {{/each}}
                 </ul>
-            </div>
-        </div>
+
+        <!--<input id="modal" type="checkbox">-->
+        <!--<label id="modalButton" for="modal">Modal Button</label>-->
+
+
         {{/if}}
+
+
+
+
+        </div>
+    </div>
     </header>
-</div>
+
+
+
 </body>
 

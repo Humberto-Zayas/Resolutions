@@ -1,0 +1,203 @@
+<body>
+<head>
+    <title>boards</title>
+</head>
+<div class="trello-blue-background">
+    <div style="position: relative; height: 44px" id="header">
+        <img class="header-logo" src="https://d78fikflryjgj.cloudfront.net/images/50b4ebc64391dc394a38e73aed57f0e2/header-logo.png">
+
+    </div>
+    <section class="boards">
+        <div>
+            <h2 style="color: white; font-size: 18px; display: inline-block">
+                ProEdify To Do's
+            </h2>
+            <div style="float: right">
+                <p style="color: white;">... Show Menu</p>
+            </div>
+        </div>
+    </section>
+    <section class="boards">
+        <div style="overflow-y: hidden; overflow-x: scroll" id="overFlow">
+            <div style="width: auto; white-space: nowrap;" id="allBoards">
+                <div style="display: inline-block;" id="listContainer">
+                    <div id="listHeader">
+                        <strong>
+                            Card Title
+                        </strong>
+                    </div>
+                    <div id="listOverflow">
+
+                        <div id="listCard">
+                            <div class="modal">
+                                <input id="modal__trigger" type="checkbox" />
+                                <label class="" for="modal__trigger">To Do List</label>
+                                <label class="" for="modal__trigger">To Do List</label>
+                                <div class="modal__overlay" role="dialog" aria-labelledby="modal__title" aria-describedby="modal_desc">
+                                    <div class="modal__wrap">
+                                        <label for="modal__trigger">&#10006;</label>
+
+
+
+
+                                        {{#if currentUser}}
+                                        <h1>Monthly Resolutions</h1>
+
+
+
+                                        <label class="hide-finished">
+                                            Hide Finished Resolutions
+                                        </label>
+                                        <input type="checkbox" checked="{{hideFinished}}">
+
+                                        {{#if currentUser.services.twitter}}
+                                        <img src="{{currentUser.services.twitter.profile_image_url}}" >
+                                        {{/if}}
+                                        <form class="new-resolution">
+
+                                            <input type="text" name="title" placeholder="A New Resolution">
+
+
+
+                                            <input type="submit" value="Submit">
+
+                                        </form>
+                                        <ul>
+                                            {{#each resolutions}}
+                                            {{> resolution}}
+                                            {{/each}}
+                                        </ul>
+
+                                        <!--<input id="modal" type="checkbox">-->
+                                        <!--<label id="modalButton" for="modal">Modal Button</label>-->
+
+
+                                        {{/if}}
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a id="addCard">Add a card...</a>
+                </div>
+                <!--here-->
+                <div style="display: inline-block;" id="listContainer">
+                    <div id="listHeader">
+                        <strong>
+                            Card Title
+                        </strong>
+                    </div>
+                    <div id="listOverflow">
+
+                        <div id="listCard">
+                            <div class="modal">
+                                <label for="modal__trigger">Not Working</label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a id="addCard">Add a card...</a>
+                </div>
+                <!--here-->
+                <div style="display: inline-block;" id="listContainer">
+                    <div id="listHeader">
+                        <strong>
+                            Card Title
+                        </strong>
+                    </div>
+                    <div id="listOverflow">
+
+                        <div id="listCard">
+                            <div class="modal">
+                                <label for="modal__trigger">Not Working</label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a id="addCard">Add a card...</a>
+                </div>
+                <!--here-->
+                <div style="display: inline-block;" id="listContainer">
+                    <div id="listHeader">
+                        <strong>
+                            Card Title
+                        </strong>
+                    </div>
+                    <div id="listOverflow">
+
+                        <div id="listCard">
+                            <div class="modal">
+                                <label for="modal__trigger">Not Working</label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a id="addCard">Add a card...</a>
+                </div>
+                <!--here-->
+                <div style="display: inline-block;" id="listContainer">
+                    <div id="listHeader">
+                        <strong>
+                            Card Title
+                        </strong>
+                    </div>
+                    <div id="listOverflow">
+
+                        <div id="listCard">
+                            <div class="modal">
+                                <label for="modal__trigger">Not Working</label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a id="addCard">Add a card...</a>
+                </div>
+                <!--here-->
+                <div style="display: inline-block;" id="listContainer">
+                    <div id="listHeader">
+                        <strong>
+                            Card Title
+                        </strong>
+                    </div>
+                    <div id="listOverflow">
+
+                        <div id="listCard">
+                            <div class="modal">
+                                <label for="modal__trigger">Not Working</label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a id="addCard">Add a card...</a>
+                </div>
+                <!--here-->
+                <div style="display: inline-block;" id="listContainer">
+                    <div id="listHeader">
+                        <strong>
+                            Card Title
+                        </strong>
+                    </div>
+                    <div id="listOverflow">
+
+                        <div id="listCard">
+                            <div class="modal">
+                                <label for="modal__trigger">Not Working</label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a id="addCard">Add a card...</a>
+                </div>
+                <!--here-->
+            </div>
+
+        </div>
+    </section>
+</div>
+
+</body>

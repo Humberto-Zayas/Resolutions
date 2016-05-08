@@ -22,3 +22,6 @@ accounts-ui
 accounts-twitter
 standard-minifier-css
 standard-minifier-js
+iron:router
+kadira:flow-router
+kadira:blaze-layout
